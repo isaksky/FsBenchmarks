@@ -20,25 +20,20 @@ type BuildListSeq() =
     let mutable b = System.Collections.Immutable.ImmutableList.Empty
     let mutable a = System.Collections.Immutable.ImmutableList.Empty
     for i = 0 to this.Size do
-      b <- a
       a <- a.Add(i + i)
     a
 
   [<Benchmark>]
   member this.FSharpListBuildAndRev() =
     let mutable a = []
-    let mutable b = []
     for i = 0 to this.Size do
-      b <- a
       a <- (i + i)::a
     List.rev a
 
   [<Benchmark>]
   member this.ImmList() =
     let mutable a = ImmList.empty
-    let mutable b = ImmList.empty
     for i = 0 to this.Size do
-      b <- a
       a <- ImmList.addLast (i + i) a
     a
 
