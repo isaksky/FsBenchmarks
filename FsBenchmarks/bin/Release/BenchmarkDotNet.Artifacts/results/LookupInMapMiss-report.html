@@ -1,0 +1,21 @@
+<pre><code>
+Host Process Environment Information:
+BenchmarkDotNet.Core=v0.9.9.0
+OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Core(TM) i7-6600U CPU 2.60GHz, ProcessorCount=4
+Frequency=2742188 ticks, Resolution=364.6723 ns, Timer=TSC
+CLR=MS.NET 4.0.30319.42000, Arch=32-bit RELEASE
+GC=Concurrent Workstation
+JitModules=clrjit-v4.6.1080.0
+</code></pre>
+<pre><code>Type=LookupInMapMiss  Mode=Throughput  
+</code></pre>
+
+<table>
+<tr><th> Method</th><th>Median</th><th>StdDev</th><th>Scaled</th><th>Scaled-SD</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Bytes Allocated/Op</th>
+</tr><tr><td>dictMiss</td><td>31.6151 ns</td><td>1.1278 ns</td><td>1.00</td><td>0.00</td><td>0.53</td><td>0.27</td><td>-</td><td>        0.05</td>
+</tr><tr><td>fsmapMiss</td><td>168.1626 ns</td><td>4.4829 ns</td><td>5.24</td><td>0.22</td><td>2.00</td><td>1.00</td><td>-</td><td>        0.19</td>
+</tr><tr><td>immMapMiss</td><td>52.7447 ns</td><td>2.0740 ns</td><td>1.65</td><td>0.08</td><td>1.04</td><td>0.52</td><td>-</td><td>        0.10</td>
+</tr><tr><td>primeVmapMiss</td><td>40.6622 ns</td><td>1.9187 ns</td><td>1.27</td><td>0.07</td><td>0.54</td><td>0.27</td><td>-</td><td>        0.05</td>
+</tr><tr><td>primeUmapMiss</td><td>50.1950 ns</td><td>1.1260 ns</td><td>1.57</td><td>0.06</td><td>298.41</td><td>0.49</td><td>-</td><td>        6.19</td>
+</tr></table>

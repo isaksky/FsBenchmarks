@@ -15,8 +15,10 @@ type Cfg() as this =
 
 let defaultSwitch () = 
   BenchmarkSwitcher [| 
-    typeof<ListBenchmarks.BuildListSeq>;
-    typeof<MapBenchmarks.BuildMapSeq>;
+    typeof<ListBenchmarks.BuildListSeq>
+    typeof<MapBenchmarks.BuildMapSeq>
+    typeof<MapBenchmarks.LookupInMapHit>
+    typeof<MapBenchmarks.LookupInMapMiss>
     typeof<ListBenchmarks.SwitchFirst2> |]
 
 [<EntryPoint>]
