@@ -1,0 +1,19 @@
+Type;Method;Mode;Platform;Jit;Toolchain;Runtime;GcMode;LaunchCount;WarmupCount;TargetCount;Affinity;Size;Median;StdDev;Scaled;Scaled-SD;Gen 0;Gen 1;Gen 2;Bytes Allocated/Op
+BuildMapSeq;SystemCollectionsGenericDict;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;100;2.8578 us;0.0642 us;1.00;0.00;1.49;-;-;3,138.74
+BuildMapSeq;SystemCollectionsImm;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;100;77.4175 us;4.8445 us;28.01;1.80;6.44;-;-;12,364.74
+BuildMapSeq;FSharpMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;100;38.9328 us;1.0895 us;13.85;0.48;4.61;-;-;8,746.64
+BuildMapSeq;ImmMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;100;25.5021 us;1.3547 us;9.09;0.51;10.20;-;-;19,316.19
+BuildMapSeq;PrimeVMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;100;15.6606 us;0.3755 us;5.57;0.18;7.46;-;-;14,190.26
+BuildMapSeq;PrimeUMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;100;7.8568 us;0.1881 us;2.74;0.09;3.77;-;-;7,468.35
+BuildMapSeq;SystemCollectionsGenericDict;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;1000;25.3865 us;2.0774 us;1.00;0.00;15.36;-;-;35,895.74
+BuildMapSeq;SystemCollectionsImm;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;1000;1,101.5596 us;28.8512 us;42.04;3.26;63.40;-;-;120,951.27
+BuildMapSeq;FSharpMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;1000;632.0978 us;11.9314 us;24.16;1.82;61.92;-;-;118,383.60
+BuildMapSeq;ImmMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;1000;394.2389 us;31.8998 us;15.29;1.64;125.09;-;-;237,138.39
+BuildMapSeq;PrimeVMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;1000;193.9116 us;4.6906 us;7.52;0.58;79.99;-;-;152,639.75
+BuildMapSeq;PrimeUMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;1000;80.3324 us;1.5338 us;3.06;0.23;36.13;-;-;74,603.05
+BuildMapSeq;SystemCollectionsGenericDict;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;10000;329.9152 us;18.0392 us;1.00;0.00;-;-;49.14;250,082.70
+BuildMapSeq;SystemCollectionsImm;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;10000;15,446.4587 us;417.1799 us;47.10;2.78;376.00;130.00;-;1,577,725.19
+BuildMapSeq;FSharpMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;10000;9,425.1493 us;231.0269 us;28.99;1.68;662.19;120.27;-;1,773,985.09
+BuildMapSeq;ImmMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;10000;7,339.8448 us;378.0445 us;22.60;1.65;372.48;184.81;42.10;2,954,467.98
+BuildMapSeq;PrimeVMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;10000;3,650.6689 us;86.1968 us;11.02;0.64;204.70;113.94;-;1,422,970.69
+BuildMapSeq;PrimeUMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;10000;1,345.5254 us;26.2622 us;4.06;0.23;67.14;23.35;61.51;801,892.54

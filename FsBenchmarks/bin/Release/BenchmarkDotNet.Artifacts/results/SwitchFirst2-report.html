@@ -1,0 +1,18 @@
+<pre><code>
+Host Process Environment Information:
+BenchmarkDotNet.Core=v0.9.9.0
+OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Core(TM) i7-6600U CPU 2.60GHz, ProcessorCount=4
+Frequency=2742188 ticks, Resolution=364.6723 ns, Timer=TSC
+CLR=MS.NET 4.0.30319.42000, Arch=32-bit RELEASE
+GC=Concurrent Workstation
+JitModules=clrjit-v4.6.1080.0
+</code></pre>
+<pre><code>Type=SwitchFirst2  Mode=Throughput  
+</code></pre>
+
+<table>
+<tr><th>Method</th><th>Size</th><th>  Median</th><th>StdDev</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Bytes Allocated/Op</th>
+</tr><tr><td>fsList</td><td>100</td><td>924.4414 ns</td><td>21.6695 ns</td><td>249.21</td><td>-</td><td>-</td><td>    1,425.01</td>
+</tr><tr><td>ImmList</td><td>100</td><td>27,116.2032 ns</td><td>575.2809 ns</td><td>3,890.00</td><td>-</td><td>-</td><td>   22,249.60</td>
+</tr></table>

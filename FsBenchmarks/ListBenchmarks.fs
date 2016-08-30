@@ -17,7 +17,6 @@ type BuildListSeq() =
 
   [<Benchmark>]
   member this.SystemCollectionsImm() =
-    let mutable b = System.Collections.Immutable.ImmutableList.Empty
     let mutable a = System.Collections.Immutable.ImmutableList.Empty
     for i = 0 to this.Size do
       a <- a.Add(i + i)
@@ -37,9 +36,37 @@ type BuildListSeq() =
       a <- ImmList.addLast (i + i) a
     a
 
-//  [<Benchmark>]
-//  member this.ImmListCE() =
-//    immList {
-//      for i = 0 to this.Size do
-//        yield (i + i)
-//    }
+
+type SwitchFirst2() =
+  let mutable _fslist = []
+  let mutable _immList = ImmList.empty
+
+  [<Params (100)>] 
+  member val public Size = 0 with get, set
+
+  [<Setup>]
+  member this.SetupData() =
+    _fslist <- [for i = 0 to this.Size do yield i + i ]
+    _immList <- immList { for i = 0 to this.Size do yield i + i }
+
+  [<Benchmark>]
+  member this.fsList() =
+    let mutable a = _fslist
+    for i = 0 to this.Size do
+      a <-
+        match a with
+        | x1::x2::xs ->
+          x2::x1::xs
+        | _ -> failwith "Logic error"
+    a
+
+  [<Benchmark>]
+  member this.ImmList() =
+    let mutable a = _immList
+    for i = 0 to this.Size do
+      a <- 
+        match a with
+        | First2(x1, x2, xs) ->
+          xs.AddFirst(x2).AddFirst(x1)
+        | _ -> failwith "Logic error"
+    a

@@ -1,0 +1,34 @@
+<pre><code>
+Host Process Environment Information:
+BenchmarkDotNet.Core=v0.9.9.0
+OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Core(TM) i7-6600U CPU 2.60GHz, ProcessorCount=4
+Frequency=2742188 ticks, Resolution=364.6723 ns, Timer=TSC
+CLR=MS.NET 4.0.30319.42000, Arch=32-bit RELEASE
+GC=Concurrent Workstation
+JitModules=clrjit-v4.6.1080.0
+</code></pre>
+<pre><code>Type=BuildMapSeq  Mode=Throughput  
+</code></pre>
+
+<table>
+<tr><th>                Method</th><th>Size</th><th>  Median</th><th>StdDev</th><th>Scaled</th><th>Scaled-SD</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Bytes Allocated/Op</th>
+</tr><tr><td>SystemCollectionsGenericDict</td><td>100</td><td>2.8578 us</td><td>0.0642 us</td><td>1.00</td><td>0.00</td><td>1.49</td><td>-</td><td>-</td><td>    3,138.74</td>
+</tr><tr><td>  SystemCollectionsImm</td><td>100</td><td>77.4175 us</td><td>4.8445 us</td><td>28.01</td><td>1.80</td><td>6.44</td><td>-</td><td>-</td><td>   12,364.74</td>
+</tr><tr><td>             FSharpMap</td><td>100</td><td>38.9328 us</td><td>1.0895 us</td><td>13.85</td><td>0.48</td><td>4.61</td><td>-</td><td>-</td><td>    8,746.64</td>
+</tr><tr><td>                ImmMap</td><td>100</td><td>25.5021 us</td><td>1.3547 us</td><td>9.09</td><td>0.51</td><td>10.20</td><td>-</td><td>-</td><td>   19,316.19</td>
+</tr><tr><td>             PrimeVMap</td><td>100</td><td>15.6606 us</td><td>0.3755 us</td><td>5.57</td><td>0.18</td><td>7.46</td><td>-</td><td>-</td><td>   14,190.26</td>
+</tr><tr><td>             PrimeUMap</td><td>100</td><td>7.8568 us</td><td>0.1881 us</td><td>2.74</td><td>0.09</td><td>3.77</td><td>-</td><td>-</td><td>    7,468.35</td>
+</tr><tr><td>SystemCollectionsGenericDict</td><td>1000</td><td>25.3865 us</td><td>2.0774 us</td><td>1.00</td><td>0.00</td><td>15.36</td><td>-</td><td>-</td><td>   35,895.74</td>
+</tr><tr><td>  SystemCollectionsImm</td><td>1000</td><td>1,101.5596 us</td><td>28.8512 us</td><td>42.04</td><td>3.26</td><td>63.40</td><td>-</td><td>-</td><td>  120,951.27</td>
+</tr><tr><td>             FSharpMap</td><td>1000</td><td>632.0978 us</td><td>11.9314 us</td><td>24.16</td><td>1.82</td><td>61.92</td><td>-</td><td>-</td><td>  118,383.60</td>
+</tr><tr><td>                ImmMap</td><td>1000</td><td>394.2389 us</td><td>31.8998 us</td><td>15.29</td><td>1.64</td><td>125.09</td><td>-</td><td>-</td><td>  237,138.39</td>
+</tr><tr><td>             PrimeVMap</td><td>1000</td><td>193.9116 us</td><td>4.6906 us</td><td>7.52</td><td>0.58</td><td>79.99</td><td>-</td><td>-</td><td>  152,639.75</td>
+</tr><tr><td>             PrimeUMap</td><td>1000</td><td>80.3324 us</td><td>1.5338 us</td><td>3.06</td><td>0.23</td><td>36.13</td><td>-</td><td>-</td><td>   74,603.05</td>
+</tr><tr><td>SystemCollectionsGenericDict</td><td>10000</td><td>329.9152 us</td><td>18.0392 us</td><td>1.00</td><td>0.00</td><td>-</td><td>-</td><td>49.14</td><td>  250,082.70</td>
+</tr><tr><td>  SystemCollectionsImm</td><td>10000</td><td>15,446.4587 us</td><td>417.1799 us</td><td>47.10</td><td>2.78</td><td>376.00</td><td>130.00</td><td>-</td><td>1,577,725.19</td>
+</tr><tr><td>             FSharpMap</td><td>10000</td><td>9,425.1493 us</td><td>231.0269 us</td><td>28.99</td><td>1.68</td><td>662.19</td><td>120.27</td><td>-</td><td>1,773,985.09</td>
+</tr><tr><td>                ImmMap</td><td>10000</td><td>7,339.8448 us</td><td>378.0445 us</td><td>22.60</td><td>1.65</td><td>372.48</td><td>184.81</td><td>42.10</td><td>2,954,467.98</td>
+</tr><tr><td>             PrimeVMap</td><td>10000</td><td>3,650.6689 us</td><td>86.1968 us</td><td>11.02</td><td>0.64</td><td>204.70</td><td>113.94</td><td>-</td><td>1,422,970.69</td>
+</tr><tr><td>             PrimeUMap</td><td>10000</td><td>1,345.5254 us</td><td>26.2622 us</td><td>4.06</td><td>0.23</td><td>67.14</td><td>23.35</td><td>61.51</td><td>  801,892.54</td>
+</tr></table>

@@ -1,0 +1,3 @@
+Type;Method;Mode;Platform;Jit;Toolchain;Runtime;GcMode;LaunchCount;WarmupCount;TargetCount;Affinity;Size;Median;StdDev;Gen 0;Gen 1;Gen 2;Bytes Allocated/Op
+SwitchFirst2;fsList;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;100;924.4414 ns;21.6695 ns;249.21;-;-;1,425.01
+SwitchFirst2;ImmList;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;100;27,116.2032 ns;575.2809 ns;3,890.00;-;-;22,249.60

@@ -13,7 +13,11 @@ type Cfg() as this =
 [<assembly:Config(typeof<Cfg>)>] do()
 
 
-let defaultSwitch () = BenchmarkSwitcher [| typeof<ListBenchmarks.BuildListSeq> |]
+let defaultSwitch () = 
+  BenchmarkSwitcher [| 
+    typeof<ListBenchmarks.BuildListSeq>;
+    typeof<MapBenchmarks.BuildMapSeq>;
+    typeof<ListBenchmarks.SwitchFirst2> |]
 
 [<EntryPoint>]
 let main argv =
