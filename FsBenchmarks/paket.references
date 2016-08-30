@@ -1,0 +1,14 @@
+BenchmarkDotNet
+BenchmarkDotNet.Core
+BenchmarkDotNet.Diagnostics.Windows
+BenchmarkDotNet.Toolchains.Roslyn
+Microsoft.CodeAnalysis.Analyzers
+Microsoft.CodeAnalysis.Common
+Microsoft.CodeAnalysis.CSharp
+Microsoft.Diagnostics.Tracing.TraceEvent
+System.Collections.Immutable
+System.Reflection.Metadata
+System.Threading.Tasks
+System.Threading.Tasks.Extensions
+Imms
+Imms.FSharp

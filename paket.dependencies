@@ -1,0 +1,17 @@
+source https://www.nuget.org/api/v2/
+framework >= net452
+
+nuget BenchmarkDotNet 0.9.9
+nuget BenchmarkDotNet.Core 0.9.9
+nuget BenchmarkDotNet.Diagnostics.Windows 0.9.9
+nuget BenchmarkDotNet.Toolchains.Roslyn 0.9.9
+nuget Microsoft.CodeAnalysis.Analyzers 1.1.0
+nuget Microsoft.CodeAnalysis.Common 1.3.2
+nuget Microsoft.CodeAnalysis.CSharp 1.3.2
+nuget Microsoft.Diagnostics.Tracing.TraceEvent 1.0.41
+nuget System.Collections.Immutable
+nuget System.Reflection.Metadata
+nuget System.Threading.Tasks
+nuget System.Threading.Tasks.Extensions
+nuget Imms
+nuget Imms.FSharp
