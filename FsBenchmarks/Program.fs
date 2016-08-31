@@ -19,6 +19,7 @@ let defaultSwitch () =
     typeof<MapBenchmarks.BuildMapSeq>
     typeof<MapBenchmarks.LookupInMapHit>
     typeof<MapBenchmarks.LookupInMapMiss>
+    typeof<MapBenchmarks.LookupInOldMaps>
     typeof<ListBenchmarks.SwitchFirst2> |]
 
 [<EntryPoint>]

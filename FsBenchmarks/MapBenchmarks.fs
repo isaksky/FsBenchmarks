@@ -147,3 +147,76 @@ type LookupInMapMiss() =
   member this.primeUmapMiss() =
     let k = rand.Next(0, 100)
     Umap.tryFind k _primeUmap
+
+type DictEntry<'k,'v when 'k: comparison> =
+  { dict: Collections.Generic.Dictionary<'k, 'v>
+    fsmap: Map<'k,'v>
+    immMap: ImmMap<'k, 'v>
+    primeVmap: Vmap<'k, 'v>
+    primeUmap: Umap<'k, 'v> }
+
+let [<Literal>] NUM_MAPS = 1000
+
+type LookupInOldMaps() =
+
+  let entries = ResizeArray<DictEntry<_,_>>(NUM_MAPS) 
+  let rand = System.Random()
+
+  do
+    let startEntry : DictEntry<int,int> =  
+      {dict= Collections.Generic.Dictionary<int,int>()
+       fsmap = Map.empty
+       immMap = ImmMap.empty
+       primeVmap = Vmap.makeEmpty()
+       primeUmap = Umap.makeEmpty(None) }
+    entries.Add(startEntry)
+    
+    let addRetDict (k:'k) (v:'v) (d: Collections.Generic.Dictionary<'k,'v>) =
+      d.[k] <- v; d
+       
+    let mutable lastEntry = startEntry
+
+    for i = 0 to NUM_MAPS do
+      let k = rand.Next(0, NUM_MAPS)
+      let v = rand.Next()
+      let entry =
+        { lastEntry with
+            dict = addRetDict k v (lastEntry.dict)
+            fsmap = Map.add k v (lastEntry.fsmap)
+            immMap = ImmMap.set k v (lastEntry.immMap)
+            primeVmap = Vmap.add k v (lastEntry.primeVmap)
+            primeUmap = Umap.add k v (lastEntry.primeUmap)
+          }
+      entries.Add(entry)
+      lastEntry <- entry
+
+  member val public Size = NUM_MAPS with get, set
+  
+  member this.randEntry() =
+    entries.[(rand.Next(0, entries.Count))] 
+
+  [<Benchmark(Baseline=true)>]
+  member this.dictMiss() =
+    let k = rand.Next(0, NUM_MAPS)
+    let ok, _v = this.randEntry().dict.TryGetValue(k)
+    ok
+
+  [<Benchmark>]
+  member this.fsmap() =
+    let k = rand.Next(0, NUM_MAPS)
+    Map.tryFind k (this.randEntry().fsmap)
+
+  [<Benchmark>]
+  member this.immMap() =
+    let k = rand.Next(0, NUM_MAPS)
+    ImmMap.tryGet k (this.randEntry().immMap)
+
+  [<Benchmark>]
+  member this.primeVmap() =
+    let k = rand.Next(0, NUM_MAPS)
+    Vmap.tryFind k (this.randEntry().primeVmap) 
+
+  [<Benchmark>]
+  member this.primeUmap() =
+    let k = rand.Next(0, NUM_MAPS)
+    Umap.tryFind k (this.randEntry().primeUmap)
