@@ -15,4 +15,3 @@ nuget System.Threading.Tasks
 nuget System.Threading.Tasks.Extensions
 nuget Imms
 nuget Imms.FSharp
-nuget Prime

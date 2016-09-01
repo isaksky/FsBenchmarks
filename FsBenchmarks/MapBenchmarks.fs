@@ -196,7 +196,7 @@ type LookupInOldMaps() =
     entries.[(rand.Next(0, entries.Count))] 
 
   [<Benchmark(Baseline=true)>]
-  member this.dictMiss() =
+  member this.dict() =
     let k = rand.Next(0, NUM_MAPS)
     let ok, _v = this.randEntry().dict.TryGetValue(k)
     ok
