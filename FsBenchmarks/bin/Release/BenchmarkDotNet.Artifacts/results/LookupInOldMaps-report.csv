@@ -1,6 +1,6 @@
 Type;Method;Mode;Platform;Jit;Toolchain;Runtime;GcMode;LaunchCount;WarmupCount;TargetCount;Affinity;Median;StdDev;Scaled;Scaled-SD;Gen 0;Gen 1;Gen 2;Bytes Allocated/Op
-LookupInOldMaps;dictMiss;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;82.0039 ns;4.2164 ns;1.00;0.00;-;-;-;0.01
-LookupInOldMaps;fsmap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;215.4286 ns;5.7570 ns;2.61;0.14;37.44;-;-;1.79
-LookupInOldMaps;immMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;178.5501 ns;4.2322 ns;2.15;0.12;40.34;-;-;1.94
-LookupInOldMaps;primeVmap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;113.6700 ns;5.2067 ns;1.37;0.09;145.50;-;-;6.21
-LookupInOldMaps;primeUmap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;249.7497 ns;7.1274 ns;3.04;0.17;221.00;2.00;-;10.11
+LookupInOldMaps;dict;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;80.9983 ns;1.7284 ns;1.00;0.00;-;-;-;0.01
+LookupInOldMaps;fsmap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;213.8007 ns;14.9382 ns;2.74;0.19;41.00;-;-;1.99
+LookupInOldMaps;immMap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;175.7655 ns;9.2337 ns;2.22;0.12;39.81;-;-;1.91
+LookupInOldMaps;primeVmap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;130.9478 ns;5.3403 ns;1.64;0.07;135.42;-;-;6.23
+LookupInOldMaps;primeUmap;Throughput;Host;Host;Host;Host;Host;Auto;Auto;Auto;Auto;292.6952 ns;16.2444 ns;3.64;0.21;177.23;1.96;-;8.42
