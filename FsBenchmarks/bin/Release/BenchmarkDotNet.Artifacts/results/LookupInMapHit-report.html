@@ -3,7 +3,7 @@ Host Process Environment Information:
 BenchmarkDotNet.Core=v0.9.9.0
 OS=Microsoft Windows NT 6.2.9200.0
 Processor=Intel(R) Core(TM) i7-6600U CPU 2.60GHz, ProcessorCount=4
-Frequency=2742188 ticks, Resolution=364.6723 ns, Timer=TSC
+Frequency=2742193 ticks, Resolution=364.6716 ns, Timer=TSC
 CLR=MS.NET 4.0.30319.42000, Arch=32-bit RELEASE
 GC=Concurrent Workstation
 JitModules=clrjit-v4.6.1080.0
@@ -13,9 +13,9 @@ JitModules=clrjit-v4.6.1080.0
 
 <table>
 <tr><th>Method</th><th>Median</th><th>StdDev</th><th>Scaled</th><th>Scaled-SD</th><th>Gen 0</th><th>Gen 1</th><th>Gen 2</th><th>Bytes Allocated/Op</th>
-</tr><tr><td>dict</td><td>45.7728 ns</td><td>0.9192 ns</td><td>1.00</td><td>0.00</td><td>0.26</td><td>0.13</td><td>-</td><td>        0.05</td>
-</tr><tr><td>fsmap</td><td>232.4820 ns</td><td>7.8520 ns</td><td>5.14</td><td>0.19</td><td>2.00</td><td>1.00</td><td>-</td><td>        0.38</td>
-</tr><tr><td>immMap</td><td>182.3140 ns</td><td>7.0238 ns</td><td>3.97</td><td>0.17</td><td>1.04</td><td>0.52</td><td>-</td><td>        0.20</td>
-</tr><tr><td>primeVmap</td><td>133.0015 ns</td><td>2.3012 ns</td><td>2.88</td><td>0.07</td><td>399.40</td><td>0.23</td><td>-</td><td>       16.42</td>
-</tr><tr><td>primeUmap</td><td>78.2537 ns</td><td>1.7675 ns</td><td>1.70</td><td>0.05</td><td>417.75</td><td>0.25</td><td>-</td><td>       17.19</td>
+</tr><tr><td>dict</td><td>48.3665 ns</td><td>3.0666 ns</td><td>1.00</td><td>0.00</td><td>0.24</td><td>0.12</td><td>-</td><td>        0.05</td>
+</tr><tr><td>fsmap</td><td>239.8859 ns</td><td>9.9293 ns</td><td>4.96</td><td>0.36</td><td>2.00</td><td>1.00</td><td>-</td><td>        0.40</td>
+</tr><tr><td>immMap</td><td>184.4154 ns</td><td>9.0846 ns</td><td>3.83</td><td>0.30</td><td>0.92</td><td>0.46</td><td>-</td><td>        0.18</td>
+</tr><tr><td>primeVmap</td><td>136.9483 ns</td><td>3.6702 ns</td><td>2.80</td><td>0.18</td><td>324.00</td><td>0.50</td><td>-</td><td>       14.01</td>
+</tr><tr><td>primeUmap</td><td>56.1783 ns</td><td>1.4253 ns</td><td>1.16</td><td>0.08</td><td>150.63</td><td>0.23</td><td>-</td><td>        6.51</td>
 </tr></table>
