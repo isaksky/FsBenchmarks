@@ -3,6 +3,7 @@ open System
 open BenchmarkDotNet.Attributes
 open Imms
 open Imms.FSharp
+open Prime
 
 type BuildListSeq() =
   [<Params (100, 1000, 10000)>] 
@@ -34,6 +35,13 @@ type BuildListSeq() =
     let mutable a = ImmList.empty
     for i = 0 to this.Size do
       a <- ImmList.addLast (i + i) a
+    a
+
+  [<Benchmark>]
+  member this.Ulist() =
+    let mutable a = Ulist.makeEmpty(None)
+    for i = 0 to this.Size do
+      a <- Ulist.add (1 + 1) a
     a
 
 
